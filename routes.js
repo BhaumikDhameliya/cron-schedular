@@ -1,6 +1,6 @@
-const express = require("express");
-const CronService = require("./crons").default;
-const router = express.Router();
+import { Router } from "express";
+import CronService from "./crons.js";
+const router = Router();
 
 router.post("/schedule", (req, res) => {
   try {
@@ -16,4 +16,4 @@ router.post("/schedule", (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
